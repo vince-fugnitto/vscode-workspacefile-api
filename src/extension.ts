@@ -6,8 +6,9 @@ export function activate(context: vscode.ExtensionContext) {
 			const workspace = vscode.workspace.workspaceFile;
 			if (workspace) {
 				vscode.window.showInformationMessage(`Workspace File: ${workspace}`);
+			} else {
+				vscode.window.showErrorMessage(`No Workspace File Present.`);
 			}
-			vscode.window.showErrorMessage(`No Workspace File Present.`);
 		}
 	);
 
